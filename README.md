@@ -21,11 +21,11 @@ There's a number of terms you'll be seeing throughout this guide - I'll outline 
 
 This guide focuses Alienware 15r4 gsyc LAPTOP _ONLY_. There are other guides out there for laptops \(see [RehabMan's guide](https://www.tonymacx86.com/threads/guide-booting-the-os-x-installer-on-laptops-with-clover.148093/) at TMac\) - but they're often _much more specific_ than this guide will be.
 
-
-**_(Assuming you already have 8gb or bigger USB drive.)_**
+**_IMP: CATALINA DOES NOT install on a 8gb usb its bigger than 8gigs so have yourself a 8+ gigs USB._**
+**_(Assuming you already have 16gb or bigger USB drive.)_**
 **_NOTE_:** (Please do not share or ask questions on pirated copies of the software, it will not be entertained.)
 
-1. Vanilla image of High Sierra 10.13.6 (You can download this from various sources, i would strongly suggest use a working mac and download it from
+1. Vanilla image of Catalina (You can download this from various sources, i would strongly suggest use a working mac and download it from
 the apple store as it will untouched and clean image.
 2. Clover Bootloader (ref to clover.zip)
 3. Clover Configurator(ref to clover.zip)
