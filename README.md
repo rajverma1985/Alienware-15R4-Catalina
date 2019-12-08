@@ -60,43 +60,10 @@ _Where MyVolume is the name of the USB drive(formatted on a MAC, if not formatte
 10. Assuming you have another hdd, ssd for mac install or another disk where windows is not installed(e.g If you have a hdd which can be partitioned like mine, I'm using another ssd which has 100gb partition for MAC and rest i have formatted in windows for other usage).
 11. Now select the drive and choose ERASE from top(middle section), erase this drive(CHOOSE Mac OS Extended (Journaled)) and in case you want to create a partition create a partition as well, the GUI is pretty self explanatory.
 12. Now go ahead and close the disk utility, you will see the option to Install mac OS. choose it and follow the instructions(basically next>>next).
-13. Once the install completes, the system will reboot. Here is the MOST IMPORTANT step for HIGH SIERRA, we have to disable or STOP the disk conversion to AFPS and the reason is you will face difficulties later on with the updates etc. on HIGH SIERRA.
+13. Once the install completes, the system will reboot, use f12 to boot from USB and on the clover screen choose boot from High Sierra, or the drive where you intalled the MAC os. The idea is to use to the EFI bootloader of the USB and boot into the hdd where the OS is installed.
 
-**_Repeat Boot OS X Install from Install macOS High Sierra_**
-
- - Through the Clover Menu select Boot OS X Install from Install macOS High Sierra like you normally would for the first part of the installer. Go through the steps to start the Installer after it finishes loading up. When the first part of the install finishes and your back at the Clover Menu select Boot OS X Install from Install macOS High Sierra again like in step 1
- - Disable APFS with Terminal
-
-   a. Open Terminal from the Utilities drop down menu at the top.
-   b. Replace “disk_drive_name” in line 2 with whatever your boot drive is named when you use ls -1 /Volumes to get the names. Input the following one line at a time in Terminal pressing enter after each line is typed:
-      ls -1 /Volumes
-      cd /Volumes/disk_drive_name
-      cd "macOS Install Data"
-      vi minstallconfig.xml
-
-In this example as listed using ls -1 /Volumes my drive_name is High Sierra
-
-   c. minstallconfig.xml contents will now populate in terminal…
-
-    Find this code:
-
-    <key>ConvertToAPFS</key>
-      <true/>
-
-   d. Use the arrow keys to highlight the ‘t‘ in
-   e. Press the DELETE key on your keyboard 4 times carefully only removing t, r, u, e
-   f. Press the letter i on your keyboard to enter insert mode, Type in false and then press the ESC key
-      The result should look like this:
-
-      <key>ConvertToAPFS</key>
-         <false/>
-    g. Type :wq to save or type :q! if you messed up and want to start over.
-
-
-14. Now when we have disabled the AFPS conversion, reboot the system again use f12 to boot from USB and on the clover screen choose boot from High Sierra, or the drive where you intalled the MAC os. The idea is to use to the EFI bootloader of the USB and boot into the hdd where the OS is installed.
-
-15. Once the system boots it will ask you to setup some basic stuff, personal details, email etc.
-16. Once you are booted into the HIGH SIERRA OS, we need to do POST install configs.
+14. Once the system boots it will ask you to setup some basic stuff, personal details, email etc.
+15. Once you are booted into the HIGH SIERRA OS, we need to do POST install configs.
 
 
 POST INSTALL:
